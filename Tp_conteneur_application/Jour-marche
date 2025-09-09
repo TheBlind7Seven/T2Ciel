@@ -1,0 +1,54 @@
+#include <iostream>      // Pour les entrées/sorties (cin, cout)
+#include <vector>        // Pour les tableaux dynamiques (std::vector)
+#include <string>        // Pour manipuler des chaînes de caractères (std::string)
+#include <algorithm>     // Pour les fonctions utiles (sort, find, etc.)
+#include <map>           // Pour les dictionnaires triés (clé-valeur)
+#include <unordered_map> // Pour les dictionnaires non triés (plus rapide)
+#include <set>           // Pour les ensembles triés
+#include <cmath>         // Pour les fonctions mathématiques (sqrt, pow, etc.)
+#include <fstream>       // Pour lire/écrire dans des fichiers
+#include <sstream>       // Pour manipuler des chaînes comme des flux
+#include <random>        // Générateurs de nombres aléatoires modernes
+#include <array>
+using namespace std;
+
+
+struct marchand
+{
+	string nom;
+	int emplacement;
+};
+
+
+bool comparer(marchand& a,marchand&b)
+{
+	return a.nom < b.nom;
+
+}
+
+
+int main()
+{
+	int nbEmplacement;
+
+	cout << "Rentrer le nombre emplacement" << endl;
+
+
+	cin >> nbEmplacement;
+
+	vector<marchand> Marchand;
+
+	for (int i = 0; i < nbEmplacement; i++) 
+	{
+		string nom;
+		cin >> nom;
+		Marchand.push_back({ nom, i });
+
+	}
+	
+	sort(Marchand.begin(), Marchand.end(), comparer);
+
+	for (int i =0, ,)
+		
+	return 0;
+}
